@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Juego Reina</title>
+	<style type="text/css">
+		body{
+			background-color: #FFAF33;
+		}
+		table,button{
+			display: table;
+			margin: 0 auto;
+			align-content: center;
+		}
+		button{
+			width:160px; 
+			height:40px;
+			text-align: center;
+			justify-content: center;
+		}
+		#result{
+			font-family: arial;
+			align-content: center;
+			text-align: center;
+			font-size: 50px;
+
+		}
+
+	</style>
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body style="background-color: #FFAF33;">
+	<br>
+	<button type="button" class="btn btn-info" id="boton">INICIAR</button>
+	<table id="myTable" width="400" height="400px"; border="0" cellspacing="2" cellpadding="2" bgcolor="#000000">
+		<tr align="center">
+			<td><font color="#ffffff" id="1">&nbsp;</font></td>
+			<td id="2" bgcolor="#ffffff">&nbsp;</td>
+			<td><font color="#ffffff" id="3">&nbsp;</font></td>
+			<td id="4" bgcolor="#ffffff">&nbsp;</td>
+			<td><font color="#ffffff" id="5">&nbsp;</font></td>
+			<td id="6" bgcolor="#ffffff">&nbsp;</td>
+			<td><font color="#ffffff" id="7">&nbsp;</font></td>
+			<td id="8" bgcolor="#ffffff">&nbsp;</td>
+		</tr>
+		<tr align="center">
+			<td id="9" bgcolor="#ffffff">&nbsp;</td>
+			<td><font color="#ffffff" id="10">&nbsp;</font></td>
+			<td id="11" bgcolor="#ffffff">&nbsp;</td>
+			<td><font color="#ffffff" id="12">&nbsp;</font></td>
+			<td id="13" bgcolor="#ffffff">&nbsp;</td>
+			<td><font color="#ffffff" id="14">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="15">&nbsp;</td>
+			<td><font color="#ffffff" id="16">&nbsp;</font></td>
+		</tr>
+		<tr align="center">
+			<td><font color="#ffffff" id="17">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="18">&nbsp;</td>
+			<td><font color="#ffffff" id="19">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="20">&nbsp;</td>
+			<td><font color="#ffffff" id="21">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="22">&nbsp;</td>
+			<td><font color="#ffffff" id="23">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="24">&nbsp;</td>
+		</tr>
+		<tr align="center">
+			<td bgcolor="#ffffff" id="25">&nbsp;</td>
+			<td><font color="#ffffff" id="26">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="27">&nbsp;</td>
+			<td><font color="#ffffff" id="28">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="29">&nbsp;</td>
+			<td><font color="#ffffff" id="30">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="31">&nbsp;</td>
+			<td><font color="#ffffff" id="32">&nbsp;</font></td>
+		</tr>  
+		<tr align="center">
+			<td><font color="#ffffff" id="33">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="34">&nbsp;</td>
+			<td><font color="#ffffff" id="35">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="36">&nbsp;</td>
+			<td><font color="#ffffff" id="37">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="38">&nbsp;</td>
+			<td><font color="#ffffff" id="39">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="40">&nbsp;</td>
+		</tr>
+		<tr align="center">
+			<td bgcolor="#ffffff" id="41">&nbsp;</td>
+			<td><font color="#ffffff" id="42">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="43">&nbsp;</td>
+			<td><font color="#ffffff" id="44">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="45">&nbsp;</td>
+			<td><font color="#ffffff" id="46">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="47">&nbsp;</td>
+			<td><font color="#ffffff" id="48">&nbsp;</font></td>
+
+		</tr>  
+		<tr align="center">
+			<td><font color="#ffffff" id="49">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="50">&nbsp;</td>
+			<td><font color="#ffffff" id="51">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="52">&nbsp;</td>
+			<td><font color="#ffffff" id="53">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="54">&nbsp;</td>
+			<td><font color="#ffffff" id="55">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="56">&nbsp;</td>
+		</tr> 
+		 <tr align="center">
+			<td bgcolor="#ffffff" id="57">&nbsp;</td>
+			<td><font color="#ffffff" id="58">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="59">&nbsp;</td>
+			<td><font color="#ffffff" id="60">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="61">&nbsp;</td>
+			<td><font color="#ffffff" id="62">&nbsp;</font></td>
+			<td bgcolor="#ffffff" id="63">&nbsp;</td>
+			<td><font color="#ffffff" id="64">&nbsp;</font></td>
+		</tr>
+	</table>
+
+ <section class="section-queen" hidden>
+
+    <div class="center">
+      <span>Reina 1</span>
+      <input id = "rx1" type="number" min="1" max="8" placeholder="X">
+      <input id = "ry1" type="number" min="1" max="8" placeholder="Y">
+    
+      <span>Reina 2</span>
+      <input id = "rx2" type="number" min="1" max="8" placeholder="X">
+      <input id = "ry2" type="number" min="1" max="8" placeholder="Y">
+    
+      <span>Reina 3</span>
+      <input id = "rx3" type="number" min="1" max="8" placeholder="X">
+      <input id = "ry3" type="number" min="1" max="8" placeholder="Y">
+    
+      <span>Reina 4</span>
+      <input id = "rx4" type="number" min="1" max="8" placeholder="X">
+      <input id = "ry4" type="number" min="1" max="8" placeholder="Y">
+    </div>
+  
+    <div class="center">
+        <span>Reina 5</span>
+        <input id = "rx5" type="number" min="1" max="8" placeholder="X">
+        <input id = "ry5" type="number" min="1" max="8" placeholder="Y">
+      
+        <span>Reina 6</span>        
+        <input id = "rx6" type="number" min="1" max="8" placeholder="X">
+        <input id = "ry6" type="number" min="1" max="8" placeholder="Y">
+      
+        <span>Reina 7</span>
+        <input id = "rx7" type="number" min="1" max="8" placeholder="X">
+        <input id = "ry7" type="number" min="1" max="8" placeholder="Y">
+      
+        <span>Reina 8</span>
+        <input id = "rx8" type="number" min="1" max="8" placeholder="X">
+        <input id = "ry8" type="number" min="1" max="8" placeholder="Y">
+    </div>
+  </section>
+  <section class="center">
+    <button id="btn">Resolver</button>
+    <br>
+    <p id="result"></p>
+    <br>
+    <button id="btn-try-a">Prueba de nuevo</button>
+  </section>
+
+
+
+
+
+
+
+	<script type="text/javascript" src="controlador.js"></script>
+</body>
+</html>

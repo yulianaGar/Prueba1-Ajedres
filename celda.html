@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    function displayResult()
+    {
+      var firstRow=document.getElementById("myTable").rows[0];
+      var x=firstRow.insertCell(-1);
+      x.innerHTML="New cell";
+
+      var img = document.createElement('img');
+      img.src = "corona.png";
+      x.appendChild(img);
+    }
+  </script>
+</head>
+<body>
+
+  <table id="myTable" border="1">
+    <tr>
+      <td>First cell</td>
+      <td>Second cell</td>
+      <td>Third cell</td>
+    </tr>
+  </table>
+  <br>
+  <button type="button" onclick="displayResult()">Insert cell</button>
+
+</body>
+</html>
